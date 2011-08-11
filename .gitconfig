@@ -1,0 +1,7 @@
+[user]
+	name = MichaelChoi
+	email = choi@cyberzero.co.jp
+[alias]
+    co = checkout
+    st = status
+    br = branch
