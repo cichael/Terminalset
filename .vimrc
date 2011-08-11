@@ -2,7 +2,6 @@
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
-"set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
 set fileencodings=ucs-bom,euc-jp,cp932,iso-2022-jp,utf-8
 set fileencodings+=,ucs-2le,ucs-2,utf-8,euc-jp
 
@@ -61,10 +60,10 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed,autoselect
 
 " バックアップファイルの保存場所指定
- set backupdir=~/.vim/vimbackup
+set backupdir=~/.vim/vimbackup
 
 " スワップファイルを作らない
- set directory=~/.vim/vimbackup
+set directory=~/.vim/vimbackup
 
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//ge
