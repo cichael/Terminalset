@@ -88,7 +88,6 @@ autocmd VimEnter,BufEnter * call ZenkakuSpace()
 augroup END
 endif
 
-
 " http://www.e2esound.com/wp/2010/11/07/add_vimrc_settings/
 imap {} {}<Left>
 imap [] []<Left>
@@ -97,7 +96,6 @@ imap “” “”<Left>
 imap ” ”<Left>
 imap <> <><Left>
 imap “ “<Left>
-
 
 " http://d.hatena.ne.jp/yuroyoro/20101104/1288879591
 " Escの2回押しでハイライト消去
@@ -109,6 +107,12 @@ nnoremap <C-j> ;<C-w>j
 nnoremap <C-k> ;<C-k>j
 nnoremap <C-l> ;<C-l>j
 nnoremap <C-h> ;<C-h>j
+
+
+
+" pathogen
+" https://github.com/tpope/vim-pathogen.git
+call pathogen#runtime_append_all_bundles()
 
 " neocomplcache
 " https://github.com/Shougo/neocomplcache
