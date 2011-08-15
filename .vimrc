@@ -113,6 +113,7 @@ nnoremap <C-h> ;<C-h>j
 " pathogen
 " https://github.com/tpope/vim-pathogen.git
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " neocomplcache
 " https://github.com/Shougo/neocomplcache
