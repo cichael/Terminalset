@@ -70,15 +70,12 @@ alias ls="ls -G"
 alias ll="ls -la -G"
 
 ## git
-#alias g='git'
 alias s='git status'
-#alias gn='git --no-pager'
 #alias -g ci='commit'
 #alias -g co='chekcout'
 
-## git commit is open MacVim
-#export GIT_EDITOR="/Applications/MacVim.app/Contents/MacOS/MacVim"
-
 ## gvim
-#alias gvim="open -a /Applications/MacVim.app/Contents/MacOS/MacVim $1"
 alias gvim="open -a /Applications/MacVim.app/ $1"
+
+## grep
+alias grep="grep --color=always"
