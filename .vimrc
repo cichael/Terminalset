@@ -66,7 +66,7 @@ set backupdir=~/.vim/vimbackup
 set directory=~/.vim/vimbackup
 
 " 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
+"autocmd BufWritePre * :%s/\s\+$//ge
 
 " 色テーマ指定
 colorscheme wombat256mod
