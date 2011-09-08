@@ -2,7 +2,7 @@
 set antialias
 
 " 透明度
-set transparency=5
+set transparency=15
 
 " フォント指定
 set guifont=Menlo:h12
