@@ -1,9 +1,15 @@
 " 文字コードの設定
 set encoding=utf-8
 set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp932,iso-2022-jp,euc-jp
-set fileencodings+=,ucs-2le,ucs-2,utf-8,euc-jp
+"set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,cp932,iso-2022-jp,sjis,euc-jp
+"set fileencodings=utf-8,sjis,euc-jp,ucs-bom,cp932,iso-2022-jp
+
+"set encoding=utf-8
+"set termencoding=utf-8
+"set fileencoding=utf-8
+"set fileencodings=ucs-bom,utf-8,cp932,iso-2022-jp,euc-jp
+"set fileencodings+=,ucs-2le,ucs-2,utf-8,euc-jp
 
 " 検索文字をハイライト
 set hlsearch
