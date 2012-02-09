@@ -114,6 +114,8 @@ nnoremap <C-k> ;<C-k>j
 nnoremap <C-l> ;<C-l>j
 nnoremap <C-h> ;<C-h>j
 
+" twig対応
+autocmd BufNewFile,BufRead *.twig set filetype=html
 
 
 " pathogen
