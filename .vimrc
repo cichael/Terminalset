@@ -175,3 +175,9 @@ function InsertTabWrapper()
     endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" vim-pastefire
+" https://github.com/delphinus35/vim-pastefire
+let g:pastefire_email='yume76@gmail.com'
+let g:pastefire_password='yume7612'
+map ,P <Plug>(pastefire)
