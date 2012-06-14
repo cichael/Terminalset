@@ -117,6 +117,9 @@ nnoremap <C-h> ;<C-h>j
 " twig対応
 autocmd BufNewFile,BufRead *.twig set filetype=html
 
+" .txt
+autocmd BufNewFile,BufRead *.txt set filetype=qfix_memo
+
 
 " pathogen
 " https://github.com/tpope/vim-pathogen.git
@@ -178,6 +181,29 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " vim-pastefire
 " https://github.com/delphinus35/vim-pastefire
-let g:pastefire_email='yume76@gmail.com'
-let g:pastefire_password='yume7612'
-map ,P <Plug>(pastefire)
+"let g:pastefire_email='yume76@gmail.com'
+"let g:pastefire_password='yume7612'
+"map ,P <Plug>(pastefire)
+
+
+" qfixapp howm
+" https://sites.google.com/site/fudist/Home/qfixhowm
+" qfixappにruntimepathを通す
+set runtimepath+=~/.vim/bundle/qfixapp
+" キーマップリーダー
+let QFixHowm_Key = 'g'
+" howm_dirはファイルを保存したいディレクトリを設定
+let howm_dir             = '~/memo/howm'
+let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
+let howm_fileencoding    = 'utf-8'
+let howm_fileformat      = 'unix'
+" QFixHowmのファイルタイプ
+let QFixHowm_FileType = 'qfix_memo'
+" キーコードやマッピングされたキー列が完了するのを待つ時間(ミリ秒)
+set timeoutlen=3500
+
+" Vimで開くファイルの正規表現指定
+let QFixHowm_OpenVimExtReg = '\.\(txt\|mkd\|wiki\|rd\|vim\|js\|java\|py\|rb\|h\|c\|cpp\|ini\|conf\|html\php|\)$'
+
+" QuickFixウィンドウコマンド
+let QFixHowm_OpenURIcmd = 'netrw'
