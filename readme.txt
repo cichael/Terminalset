@@ -12,6 +12,14 @@ https://github.com/Shougo/vimproc/tags
 neocomplcacheはキャッシュの作成にvimprocを使用しています。
 vimprocをインストールするとキャッシュの作成を非同期で行うようになり、
 キャッシュ作成時の待ち時間がロになるようです。
+(vimshellにも必須らしい)
+
+-- makeが必要
+cd .vim/bundle/Shougo-vimproc-de945c8
+make -f make_mac.mak
+gcc -O2 -W -Wall -Wno-unused -bundle -fPIC -arch i386 -arch x86_64 -o autoload/proc.so autoload/proc.c -lutil
+
+
 
 
 * 参考URL
