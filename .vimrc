@@ -124,9 +124,12 @@ autocmd BufNewFile,BufRead *.txt set filetype=qfix_memo
 
 " pathogen
 " https://github.com/tpope/vim-pathogen.git
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+call pathogen#infect()
 call pathogen#helptags()
-
+syntax on
+filetype plugin indent on
 
 " unite.vim
 " http://d.hatena.ne.jp/ruedap/20110117/vim_unite_plugin_1_week
