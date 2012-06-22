@@ -10,11 +10,13 @@ set guifont=Menlo:h12
 "set guifont=Ricty:h13
 
 " サイズ
-set lines=45 columns=150
+set lines=55 columns=150
 
 " ツールバー非表示
 set guioptions-=T
 
 " 色テーマ指定
-colorscheme pyte
+set background=light
+colorscheme solarized
+"colorscheme pyte
 "colorscheme wombat256mod
