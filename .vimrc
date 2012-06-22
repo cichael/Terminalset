@@ -75,7 +75,8 @@ set directory=~/.vim/vimbackup
 "autocmd BufWritePre * :%s/\s\+$//ge
 
 " 色テーマ指定
-colorscheme wombat256mod
+colorscheme jellybeans
+"colorscheme wombat256mod
 
 
 " http://tech.thekyo.jp/現在のvimrc-vimrc/165/
