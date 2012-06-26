@@ -68,8 +68,8 @@ set clipboard=unnamed,autoselect
 " バックアップファイルの保存場所指定
 set backupdir=~/.vim/vimbackup
 
-" スワップファイルを作らない
-set directory=~/.vim/vimbackup
+" スワップファイルを作らない set noswapfile
+set directory=~/.vim/tmp
 
 " 保存時に行末の空白を除去する
 "autocmd BufWritePre * :%s/\s\+$//ge
@@ -115,10 +115,10 @@ nnoremap <C-k> ;<C-k>j
 nnoremap <C-l> ;<C-l>j
 nnoremap <C-h> ;<C-h>j
 
-" twig対応
+" filetype=.twig
 autocmd BufNewFile,BufRead *.twig set filetype=html
 
-" .txt
+" filetype=.txt
 autocmd BufNewFile,BufRead *.txt set filetype=qfix_memo
 
 
