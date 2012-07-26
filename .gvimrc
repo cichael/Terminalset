@@ -20,3 +20,6 @@ set background=light
 colorscheme solarized
 "colorscheme pyte
 "colorscheme wombat256mod
+
+" ビープ音を消す
+set visualbell t_vb=

@@ -68,8 +68,8 @@ set clipboard=unnamed,autoselect
 " バックアップファイルの保存場所指定
 set backupdir=~/.vim/vimbackup
 
-" スワップファイルを作らない
-set directory=~/.vim/vimbackup
+" スワップファイルを作らない set noswapfile
+set directory=~/.vim/tmp
 
 " 保存時に行末の空白を除去する
 "autocmd BufWritePre * :%s/\s\+$//ge
@@ -115,10 +115,10 @@ nnoremap <C-k> ;<C-k>j
 nnoremap <C-l> ;<C-l>j
 nnoremap <C-h> ;<C-h>j
 
-" twig対応
+" filetype=.twig
 autocmd BufNewFile,BufRead *.twig set filetype=html
 
-" .txt
+" filetype=.txt
 autocmd BufNewFile,BufRead *.txt set filetype=qfix_memo
 
 
@@ -152,6 +152,9 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
 " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+" ヒストリ
+let g:unite_source_history_yank_enable =1  "history/yankの有効化
+nnoremap <silent> ,uh :<C-u>Unite history/yank<CR>
 
 " unite.vim上でのキーマッピング
 autocmd FileType unite call s:unite_my_settings()
@@ -211,3 +214,18 @@ let QFixHowm_OpenVimExtReg = '\.\(txt\|mkd\|wiki\|rd\|vim\|js\|java\|py\|rb\|h\|
 
 " QuickFixウィンドウコマンド
 let QFixHowm_OpenURIcmd = 'netrw'
+
+
+" gundo.vim
+"nnoremap <silent> ,ud :<C-u> :GundoToggle<CR>
+nmap U :<C-u>GundoToggle<CR> "Shift + U
+
+" rキーでdiffを表示
+""let g:gundo_auto_preview = 0
+
+
+"" ref.vim 削除するかも
+nmap ,rp :<C-u>Ref phpmanual<Space>
+let g:ref_phpmanual_path = $HOME . '/.vim/dic/php-chunked-xhtml/'
+"let $PATH = $PATH . ':/opt/local/bin'
+let g:ref_use_vimproc=0   " vimprocをインストールしてない場合は0を指定
