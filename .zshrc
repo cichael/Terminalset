@@ -19,7 +19,8 @@ RPROMPT="[%~]"
 
 precmd () {
   #PROMPT="%{%(?.$fg[white].$fg[red])%}%U$USER@%m%%%u%{$reset_color%} "
-  PROMPT="%{%(?.$fg[white].$fg[red])%}$USER >%{$reset_color%} "
+  #PROMPT="%{%(?.$fg[white].$fg[red])%}$USER >%{$reset_color%} "
+  PROMPT="%{%(?.$fg[black].$fg[red])%}>%{$reset_color%} "
 }
 
 ## no beep
