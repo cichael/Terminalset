@@ -40,7 +40,8 @@ set autoindent
 set nocompatible
 
 " 強調表示(色付け)のON/OFF設定
-syntax on
+"syntax on
+syntax enable
 
 " <Tab>、行末の半角スペースを明示的に表示
 set list
@@ -75,9 +76,9 @@ set directory=~/.vim/tmp
 "autocmd BufWritePre * :%s/\s\+$//ge
 
 " 色テーマ指定
-colorscheme jellybeans
-"colorscheme wombat256mod
-
+"colorscheme jellybeans
+set background=light
+colorscheme solarized
 
 " http://tech.thekyo.jp/現在のvimrc-vimrc/165/
 " 全角スペース表示
@@ -128,7 +129,7 @@ autocmd BufNewFile,BufRead *.txt set filetype=qfix_memo
 "call pathogen#helptags()
 call pathogen#infect()
 call pathogen#helptags()
-syntax on
+"syntax on
 filetype plugin indent on
 
 " unite.vim
@@ -210,22 +211,17 @@ let QFixHowm_FileType = 'qfix_memo'
 set timeoutlen=3500
 
 " Vimで開くファイルの正規表現指定
-let QFixHowm_OpenVimExtReg = '\.\(txt\|mkd\|wiki\|rd\|vim\|js\|java\|py\|rb\|h\|c\|cpp\|ini\|conf\|html\php|\)$'
+let QFixHowm_OpenVimExtReg = '\.\(txt\|mkd\|wiki\|rd\|vim\|js\|java\|py\|rb\|h\|c\|cpp\|ini\|conf\|html\|php)$'
 
 " QuickFixウィンドウコマンド
 let QFixHowm_OpenURIcmd = 'netrw'
 
+" menuのプレビューをoff
+let QFixHowm_MenuPreviewEnable = 0
 
 " gundo.vim
 "nnoremap <silent> ,ud :<C-u> :GundoToggle<CR>
-nmap U :<C-u>GundoToggle<CR> "Shift + U
+"nmap U :<C-u>GundoToggle<CR> "Shift + U
 
 " rキーでdiffを表示
 ""let g:gundo_auto_preview = 0
-
-
-"" ref.vim 削除するかも
-nmap ,rp :<C-u>Ref phpmanual<Space>
-let g:ref_phpmanual_path = $HOME . '/.vim/dic/php-chunked-xhtml/'
-"let $PATH = $PATH . ':/opt/local/bin'
-let g:ref_use_vimproc=0   " vimprocをインストールしてない場合は0を指定
